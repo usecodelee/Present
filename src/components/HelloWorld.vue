@@ -7,7 +7,7 @@
         v-for="(puzzle,index) in puzzles"
         :key="puzzle"
         v-text="puzzle"
-        class="cell"
+        :class="puzzle === ''? 'cell cells':'cell'"
       ></div>
     </transition-group>
   </div>
@@ -76,14 +76,14 @@ export default {
 
 <style>
 .box {
-    width: 400px;
-    margin: 60px auto 0;
+  width: 400px;
+  margin: 60px auto 0;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  width: 308px;
+  width: 318px;
   margin-top: 10px;
 }
 .cell {
@@ -92,19 +92,16 @@ export default {
   align-items: center;
   width: 100px;
   height: 100px;
-  border: 1px solid #aaa;
-  margin-right: -1px;
-  margin-bottom: -1px;
+  margin: 1px;
+  -moz-box-shadow: 0px 0px 3px #333333;
+  -webkit-box-shadow: 0px 0px 3px #333333;
+  box-shadow: 0px 0px 3px #333333;
+  background-color: #996666;
 }
-.cell:nth-child(3n) {
-  margin-right: 0;
-}
-.cell:nth-child(27n) {
-  margin-bottom: 0;
+.cells {
+  background-color: #fff;
 }
 .cell-move {
-  transition: transform 1s;
+  transition: transform .5s;
 }
-</style>
-<style scoped>
 </style>
