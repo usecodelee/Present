@@ -63,7 +63,7 @@ export default {
         const isPass = newPuzzles.every((e, i) => e === i + 1);
 
         if (isPass) {
-          alert("恭喜，闯关成功！");
+          alert("666！");
         }
       }
     }
