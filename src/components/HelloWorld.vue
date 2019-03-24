@@ -83,10 +83,13 @@ export default {
 .container {
   display: flex;
   flex-wrap: wrap;
-  width: 318px;
+  width: 306px;
   margin-top: 10px;
+  border: 1px solid #ccc;
 }
 .cell {
+  color: #fff;
+  font-size: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -100,8 +103,11 @@ export default {
 }
 .cells {
   background-color: #fff;
+  -moz-box-shadow: 0px 0px 0px #333333;
+  -webkit-box-shadow: 0px 0px 0px #333333;
+  box-shadow: 0px 0px 0px #333333;
 }
 .cell-move {
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 </style>
